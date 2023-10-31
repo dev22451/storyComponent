@@ -1,6 +1,8 @@
 
 import { StyleSheet, TextInput, View,TouchableOpacity } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
+import { Input } from "./inputText";
+import {ButtonComponent} from './button'
 
 export const Task = ({
   task:  id, state, title,
@@ -87,6 +89,10 @@ export const Task = ({
         />
       </TouchableOpacity>
       </View>
+    <ButtonComponent 
+    title={"Click me!!"}
+    style={styles.changeColor}
+    />
     </View>
   );
 };
@@ -115,5 +121,8 @@ export const styles = StyleSheet.create({
         height:60,
         width:'70%',
         paddingHorizontal:10
+    },
+    changeColor:{
+      backgroundColor:'grey'
     }
 });

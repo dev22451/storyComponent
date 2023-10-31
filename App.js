@@ -1,12 +1,16 @@
 import { StyleSheet, Text, View } from "react-native";
 import Constants from "expo-constants";
 import { Task } from "./.storybook/components/Task";
+import {Input} from './.storybook/components/inputText';
+import {ButtonComponent} from './.storybook/components/button';
 
 
 function App() {
   return (
     <View style={styles.container}>
       <Task/>
+      {/* <Input/> */}
+      {/* <ButtonComponent/> */}
     </View>
   );
 }
