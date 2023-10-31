@@ -1,13 +1,13 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react-native";
-import { MyButton } from "./Button";
+import { Input } from "./inputText";
 import { View } from "react-native";
 
-const MyButtonMeta: ComponentMeta<typeof MyButton> = {
-  title: "MyButton",
-  component: MyButton,
+const MyButtonMeta: ComponentMeta<typeof Input> = {
+  title: "InputText",
+  component: Input,
   args: {
-    title: "Hello world",
+    title: "Write something here!!",
   },
   decorators: [
     (Story) => (
@@ -20,6 +20,6 @@ const MyButtonMeta: ComponentMeta<typeof MyButton> = {
 
 export default MyButtonMeta;
 
-type MyButtonStory = ComponentStory<typeof MyButton>;
+type InputStory = ComponentStory<typeof Input>;
 
-export const Basic: MyButtonStory = (args) => <MyButton {...args} />;
+export const Basic: InputStory = (args) => <Input {...args} />;

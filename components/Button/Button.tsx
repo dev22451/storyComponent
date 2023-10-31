@@ -8,10 +8,9 @@ interface MyButtonProps {
   restProps: object;
   loader: boolean;
   teststyles:object;
-  
+  topper:string
 }
-
-export const MyButton = ({ onPress, title,style,restProps,loader,teststyles }: MyButtonProps) => {
+export const MyButton = ({ onPress, title,style,restProps,loader,teststyles,topper}: MyButtonProps) => {
   return (
     <TouchableOpacity style={[styles.container,style]} onPress={onPress} {...restProps}>
       {loader ? (
@@ -21,6 +20,9 @@ export const MyButton = ({ onPress, title,style,restProps,loader,teststyles }: M
           {title}
         </Text>
       )}
+       <Text style={[styles.textSize,teststyles]}>
+        {topper}
+      </Text>
     </TouchableOpacity>
   );
 };
