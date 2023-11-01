@@ -50,6 +50,9 @@ try {
 const getStories = () => {
   return {
     "./components/Button/Button.stories.tsx": require("../components/Button/Button.stories.tsx"),
+    "./components/Card/Card.stories.tsx": require("../components/Card/Card.stories.tsx"),
+    "./components/Header/Header.stories.tsx": require("../components/Header/Header.stories.tsx"),
+    "./components/InputText/InputText.stories.tsx": require("../components/InputText/InputText.stories.tsx"),
   };
 };
 
