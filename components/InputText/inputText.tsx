@@ -22,12 +22,11 @@ interface InputProps {
     secureTextEntry:boolean;
     size:number;
     color:string
-
   }
 export const Input = ({
   style,
   value,
-  show,
+  // show,
   name,
   size,
   onChangeText,
@@ -42,6 +41,7 @@ export const Input = ({
   ...props
 } : InputProps) => {
     const [state, setState] = useState(true)
+    const [show,setShow] = useState(true)
     const [hidePass, setHidePass] = useState(true);
     const handleHide = () => {
         setHidePass(!hidePass);
@@ -52,11 +52,11 @@ export const Input = ({
 {state == true ? (
      <MaterialIcons
        name='check-box'
-       size={size}
-       color={color}
+       size={26}
+       color={'black'}
      />
     ) : (
-      <MaterialIcons name="check-box" size={26} color="#26c6da" />
+      <MaterialIcons name="check-box" size={size} color={color} />
     )}
 </View>
 <View>
@@ -88,11 +88,12 @@ export const Input = ({
 const styles = StyleSheet.create({
     mainView:{
         height:55,
-        width:'90%',
+        width:'100%',
         borderWidth:1,
         flexDirection:'row',
         alignItems:'center',
-        borderRadius:10
+        borderRadius:10,
+        backgroundColor:'purple'
     },
     input:{
         height:55,
